@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MiniPlayerFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/miniPlayerLayout"
+        android:background="@color/design_default_color_primary_dark"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/miniPlayerAlbumArt"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:srcCompat="@drawable/ic_music" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/miniPlayer_ic_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="7dp"
+            android:layout_toStartOf="@id/miniPlayer_ic_next"
+            android:clickable="true"
+            android:focusable="true"
+            app:fabSize="mini"
+            app:srcCompat="@drawable/ic_play" />
+
+        <ImageView
+            android:id="@+id/miniPlayer_ic_next"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            app:srcCompat="@drawable/ic_next" />
+
+        <TextView
+            android:id="@+id/miniPlayerSong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toStartOf="@id/miniPlayer_ic_play"
+            android:layout_toEndOf="@id/miniPlayerAlbumArt"
+            android:maxLines="1"
+            android:text="song name is here"
+            android:textColor="#FFF"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/miniPlayerArtistName"
+            android:text="song album is here"
+            android:textColor="#FFF"
+            android:layout_below="@id/miniPlayerSong"
+            android:layout_toEndOf="@id/miniPlayerAlbumArt"
+            android:layout_toStartOf="@id/miniPlayer_ic_play"
+            android:layout_marginLeft="20dp"/>
+
+    </RelativeLayout>
+
+</FrameLayout>
